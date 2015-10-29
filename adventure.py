@@ -36,5 +36,8 @@ while True:
 
     #as the user for their direction the ywould like to go
     direction = raw_input('Which direction do you want to go?\n')
-    #use the valid_cirections dictionary to move us there.
-    position = valid_directions[direction]
+    if direction in valid_directions:
+        #use the valid_cirections dictionary to move us there.
+        position = valid_directions[direction]
+    else:
+        print ("Not a valid direction. Try again")
